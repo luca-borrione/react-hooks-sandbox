@@ -1,0 +1,33 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+
+  //
+  // If you created a workspace file, you will need to copy over all the following cucumberautocomplete settings, as they will not be picked up from here
+  // used by the alexkrechik.cucumberautocomplete extension
+  // -- from here ⌄⌄
+  "cucumberautocomplete.steps": ["features/**/*"],
+  "cucumberautocomplete.stepsInvariants": true,
+  // -- to here ⌃⌃
+  //
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "javascript.preferences.importModuleSpecifier": "shortest",
+  "javascript.preferences.importModuleSpecifierEnding": "minimal",
+  "eslint.workingDirectories": [
+    {
+      "pattern": "./src"
+    }
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.fixAllJson": "explicit",
+  },
+}
