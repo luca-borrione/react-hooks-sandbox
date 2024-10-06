@@ -1,0 +1,15 @@
+.DS_Store
+.history/
+
+**/*.code-workspace
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+node_modules/
+package-lock.json
