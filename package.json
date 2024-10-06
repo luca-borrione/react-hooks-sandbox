@@ -1,0 +1,25 @@
+{
+  "name": "react-hooks-sandbox",
+  "version": "1.0.0",
+  "description": "Interview Tests based on React Hooks and RTL",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luca-borrione/react-hooks-sandbox.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "rtl"
+  ],
+  "author": "Luca Borrione",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/luca-borrione/react-hooks-sandbox/issues"
+  },
+  "homepage": "https://github.com/luca-borrione/react-hooks-sandbox#readme",
+  "packageManager": "yarn@4.5.0"
+}
