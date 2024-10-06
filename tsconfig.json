@@ -18,9 +18,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "typeRoots": ["./node_modules/@typescript-eslint", "./node_modules/@types", "./node_modules/@testing-library"],
+    "types": ["jest", "@testing-library/jest-dom"],
   },
   "include": [
     "src"
-  ]
+  ],
 }
