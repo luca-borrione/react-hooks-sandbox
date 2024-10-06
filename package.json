@@ -1,25 +1,53 @@
 {
   "name": "react-hooks-sandbox",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Interview Tests based on React Hooks and RTL",
-  "main": "index.js",
-  "scripts": {
-    "test": "yarn test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/luca-borrione/react-hooks-sandbox.git"
-  },
   "keywords": [
     "react",
     "hooks",
     "rtl"
   ],
-  "author": "Luca Borrione",
-  "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/luca-borrione/react-hooks-sandbox/issues"
   },
-  "homepage": "https://github.com/luca-borrione/react-hooks-sandbox#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luca-borrione/react-hooks-sandbox.git"
+  },
+  "license": "CC0-1.0",
+  "author": "Luca Borrione",
+  "main": "src/index.tsx",
+  "scripts": {
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.112",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
   "packageManager": "yarn@4.5.0"
 }
