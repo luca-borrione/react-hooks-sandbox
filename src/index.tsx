@@ -3,8 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ReactCounterApp from "./bfe-dev/react-counter-app";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { ReactCounterApp } from "./bfe-dev/routes/react-counter-app";
+import { UseTimeoutApp } from "./bfe-dev/routes/use-timeout";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,9 +16,11 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}></Route>
         <Route
-          path="/bfe-dev/react-counter-app/"
+          path="/bfe/react-counter-app/"
           element={<ReactCounterApp />}
         ></Route>
+        <Route path="/bfe/use-timeout/" element={<UseTimeoutApp />}></Route>
+        <Route path="*" element={<Navigate to="/" replace={true} />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
