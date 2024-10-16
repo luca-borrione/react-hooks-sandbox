@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ReactCounterApp } from "./bfe-dev/routes/react-counter-app";
 import { UseTimeoutApp } from "./bfe-dev/routes/use-timeout";
 import { UseIsFirstRenderApp } from "./bfe-dev/routes/use-is-first-render";
+import { UseSWR } from "./bfe-dev/routes/use-swr";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -25,6 +26,7 @@ root.render(
           path="/bfe/use-is-first-render/"
           element={<UseIsFirstRenderApp />}
         ></Route>
+        <Route path="/bfe/use-swr/" element={<UseSWR />}></Route>
         <Route path="*" element={<Navigate to="/" replace={true} />} />
       </Routes>
     </BrowserRouter>
