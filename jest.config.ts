@@ -1,6 +1,6 @@
 const getConfig = async () => {
   return {
-    setupFilesAfterEnv: ["<rootDir>/jest-setup.js"],
+    setupFilesAfterEnv: ['<rootDir>/jest-setup.js'],
     verbose: true,
   };
 };

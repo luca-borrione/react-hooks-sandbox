@@ -1,7 +1,7 @@
-import { renderHook } from "@testing-library/react";
-import { useTimeout } from "../use-timeout";
+import { renderHook } from '@testing-library/react';
+import { useTimeout } from '../use-timeout';
 
-describe("useTimeout", () => {
+describe('useTimeout', () => {
   const delay = 1000;
 
   beforeEach(() => {
@@ -13,7 +13,7 @@ describe("useTimeout", () => {
     jest.restoreAllMocks();
   });
 
-  it("callback should be triggered after the delay", () => {
+  it('callback should be triggered after the delay', () => {
     const callbackSpy = jest.fn();
     renderHook(() => {
       useTimeout(callbackSpy, delay);
@@ -24,10 +24,10 @@ describe("useTimeout", () => {
     expect(callbackSpy).toHaveBeenCalledTimes(1);
   });
 
-  it("should clear the timeout, when unmounted", () => {
+  it('should clear the timeout, when unmounted', () => {
     const callbackSpy = jest.fn();
-    const setTimeoutSpy = jest.spyOn(window, "setTimeout");
-    const clearTimeoutSpy = jest.spyOn(window, "clearTimeout");
+    const setTimeoutSpy = jest.spyOn(window, 'setTimeout');
+    const clearTimeoutSpy = jest.spyOn(window, 'clearTimeout');
 
     const { unmount } = renderHook(() => {
       useTimeout(callbackSpy, 2000);
@@ -40,7 +40,7 @@ describe("useTimeout", () => {
     expect(clearTimeoutSpy).toHaveBeenCalledTimes(1);
   });
 
-  it("should reset the timeout, when delay changes", () => {
+  it('should reset the timeout, when delay changes', () => {
     const callbackSpy = jest.fn();
     const { rerender } = renderHook(({ d }: { d: number } = { d: 2000 }) => {
       useTimeout(callbackSpy, d);
@@ -59,7 +59,7 @@ describe("useTimeout", () => {
     expect(callbackSpy).toHaveBeenCalledTimes(1);
   });
 
-  it("should NOT reset the timeout, when callback changes", () => {
+  it('should NOT reset the timeout, when callback changes', () => {
     const callbackSpy1 = jest.fn();
     const callbackSpy2 = jest.fn();
     const { rerender } = renderHook(

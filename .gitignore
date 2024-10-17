@@ -3,10 +3,6 @@
 # misc
 .DS_Store
 .history/
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 **/*.code-workspace
 
 # dependencies
@@ -23,8 +19,8 @@ package-lock.json
 yarn-debug.log*
 yarn-error.log*
 
+# dev
+.eslintcache
+
 # testing
 /coverage
-
-# production
-/build
