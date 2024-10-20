@@ -6,6 +6,6 @@
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "Orta.vscode-jest",
-    "zardoy.fix-all-json",
+    "zardoy.fix-all-json"
   ]
 }

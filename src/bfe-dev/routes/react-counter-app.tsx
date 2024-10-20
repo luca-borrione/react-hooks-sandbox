@@ -1,4 +1,4 @@
-import { CounterButtons } from "../components/counter-buttons";
+import { CounterButtons } from '../components/counter-buttons';
 
 export function ReactCounterApp() {
   return <CounterButtons />;

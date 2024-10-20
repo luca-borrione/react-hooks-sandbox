@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import { useTimeout } from "../hooks/use-timeout";
+import { useState, useEffect } from 'react';
+import { useTimeout } from '../hooks/use-timeout';
 
 const makeCallback = (id: string) => () => {
-  console.log(">> fired callback: ", id);
+  console.log('>> fired callback: ', id);
 };
 
 const Timer = ({ id, delay }: { id: string; delay: number }) => {
-  console.log(">> TIMER");
+  console.log('>> TIMER');
   useTimeout(makeCallback(id), delay);
   return null;
 };
@@ -16,12 +16,12 @@ function UseTimeout({ id, delay }: { id: string; delay: number }) {
 
   useEffect(() => {
     window.setTimeout(() => {
-      console.log(">> set showTimer to OFF");
+      console.log('>> set showTimer to OFF');
       setShowTimer(false);
     }, 3000);
   }, []);
 
-  console.log(">> showTimer", showTimer);
+  console.log('>> showTimer', showTimer);
   return showTimer ? <Timer id={id} delay={delay} /> : null;
 }
 
