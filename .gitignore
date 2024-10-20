@@ -26,5 +26,8 @@ yarn-error.log*
 # testing
 /coverage
 
+# development
+.eslintcache
+
 # production
 /build

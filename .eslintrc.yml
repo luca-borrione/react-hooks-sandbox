@@ -1,9 +1,0 @@
-root: true
-
-extends:
-  - react-app
-  - react-app/jest
-
-env:
-  browser: true
-  jest: true
