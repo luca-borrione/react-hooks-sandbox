@@ -12,6 +12,7 @@ import { UsePrevious } from './bfe-dev/routes/use-previous';
 import { UseHover } from './bfe-dev/routes/use-hover';
 import { UseToggle } from './bfe-dev/routes/use-toggle';
 import { UseDebounce } from './bfe-dev/routes/use-debounce';
+import { UseEffectOnce } from './bfe-dev/routes/use-effect-once';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -27,6 +28,7 @@ root.render(
         <Route path="/bfe/use-hover/" element={<UseHover />}></Route>
         <Route path="/bfe/use-toggle/" element={<UseToggle />}></Route>
         <Route path="/bfe/use-debounce/" element={<UseDebounce />}></Route>
+        <Route path="/bfe/use-effect-once/" element={<UseEffectOnce />}></Route>
         <Route path="*" element={<Navigate to="/" replace={true} />} />
       </Routes>
     </BrowserRouter>
