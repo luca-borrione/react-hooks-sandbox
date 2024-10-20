@@ -10,6 +10,7 @@ import { UseIsFirstRenderApp } from './bfe-dev/routes/use-is-first-render';
 import { UseSWR } from './bfe-dev/routes/use-swr';
 import { UsePrevious } from './bfe-dev/routes/use-previous';
 import { UseHover } from './bfe-dev/routes/use-hover';
+import { UseToggle } from './bfe-dev/routes/use-toggle';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -23,6 +24,7 @@ root.render(
         <Route path="/bfe/use-swr/" element={<UseSWR />}></Route>
         <Route path="/bfe/use-previous/" element={<UsePrevious />}></Route>
         <Route path="/bfe/use-hover/" element={<UseHover />}></Route>
+        <Route path="/bfe/use-toggle/" element={<UseToggle />}></Route>
         <Route path="*" element={<Navigate to="/" replace={true} />} />
       </Routes>
     </BrowserRouter>

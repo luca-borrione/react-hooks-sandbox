@@ -2,9 +2,11 @@ import { useCallback, useState, useReducer } from 'react';
 
 export function useToggle(on: boolean): [boolean, () => void] {
   const [enbaled, setEnabled] = useState(on);
+
   const toggle = useCallback(() => {
     setEnabled(!enbaled);
   }, [enbaled]);
+
   return [enbaled, toggle];
 }
 
