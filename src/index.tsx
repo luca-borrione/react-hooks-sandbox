@@ -14,6 +14,7 @@ import { UseToggle } from './bfe-dev/routes/use-toggle';
 import { UseDebounce } from './bfe-dev/routes/use-debounce';
 import { UseEffectOnce } from './bfe-dev/routes/use-effect-once';
 import { PhoneNumberInput } from './bfe-dev/components/phone-number-input';
+import { UseFocus } from './bfe-dev/routes/use-focus';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -31,6 +32,7 @@ root.render(
         <Route path="/bfe/use-debounce/" element={<UseDebounce />}></Route>
         <Route path="/bfe/use-effect-once/" element={<UseEffectOnce />}></Route>
         <Route path="/bfe/phone-number-input/" element={<PhoneNumberInput />}></Route>
+        <Route path="/bfe/use-focus/" element={<UseFocus />}></Route>
         <Route path="*" element={<Navigate to="/" replace={true} />} />
       </Routes>
     </BrowserRouter>
