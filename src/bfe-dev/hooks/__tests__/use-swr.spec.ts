@@ -1,5 +1,4 @@
 import { renderHook, waitFor } from '@testing-library/react';
-import { act } from 'react';
 import { useSWR } from '../use-swr';
 
 interface ReturnData {
@@ -35,23 +34,20 @@ describe('useSWR', () => {
       });
 
     const { result } = renderHook(() => useSWR<ReturnData, Error>('key', fetcher));
+
     expect(result.current.data).toBeUndefined();
     expect(result.current.error).toBeUndefined();
 
-    // eslint-disable-next-line testing-library/no-unnecessary-act
-    await act(async () => {
-      jest.advanceTimersToNextTimer();
-      await waitFor(() => result.current.data);
-    });
+    jest.advanceTimersToNextTimer();
+    await waitFor(() => expect(result.current.data).toStrictEqual(returnData));
 
-    expect(result.current.data).toStrictEqual(returnData);
     expect(result.current.error).toBeUndefined();
   });
 
   it('should return the expected error, when the promise resolves', async () => {
     const error: Error = { message: 'BFE.dev' };
     const fetcher = () =>
-      new Promise<ReturnData>((resolve, reject) => {
+      new Promise<ReturnData>((_, reject) => {
         window.setTimeout(() => reject(error), 2000);
       });
 
@@ -60,14 +56,10 @@ describe('useSWR', () => {
     expect(result.current.data).toBeUndefined();
     expect(result.current.error).toBeUndefined();
 
-    // eslint-disable-next-line testing-library/no-unnecessary-act
-    await act(async () => {
-      jest.advanceTimersToNextTimer();
-      await waitFor(() => result.current.error);
-    });
+    jest.advanceTimersToNextTimer();
+    await waitFor(() => expect(result.current.error).toStrictEqual(error));
 
     expect(result.current.data).toBeUndefined();
-    expect(result.current.error).toStrictEqual(error);
   });
 
   it('should return the expected data, when the fetcher is not a promise', async () => {

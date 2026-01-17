@@ -31,3 +31,7 @@ yarn-error.log*
 
 # production
 /build
+/dist
+
+# TypeScript incremental build info
+*.tsbuildinfo
