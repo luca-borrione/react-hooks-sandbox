@@ -17,5 +17,3 @@ export function CounterButtons() {
     </div>
   );
 }
-
-// run your code by clicking the run button on the right
