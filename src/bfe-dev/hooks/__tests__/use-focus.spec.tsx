@@ -42,6 +42,7 @@ describe('useFocus', () => {
   });
 
   it('should change the target of the focus listeners according to the ref, if this changes', async () => {
+    const user = userEvent.setup();
     render(<App />);
     const textboxes = screen.getAllByRole('textbox');
     const button = screen.getByRole('button');
@@ -51,7 +52,7 @@ describe('useFocus', () => {
     });
     expect(screen.queryByText(HOVERED_TEXT)).not.toBeInTheDocument();
 
-    userEvent.click(button);
+    await user.click(button);
 
     act(() => {
       textboxes[1].focus();

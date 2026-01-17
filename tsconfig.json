@@ -1,26 +1,29 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
+
+    /* Bundler mode */
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
     "isolatedModules": true,
+    "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-    "typeRoots": [
-      "./node_modules/@typescript-eslint",
-      "./node_modules/@types",
-      "./node_modules/@testing-library"
-    ],
-    "types": ["jest", "@testing-library/jest-dom"]
+    "esModuleInterop": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    /* Jest */
+    "types": ["jest"]
   },
-  "include": ["src", "./jest-setup.ts"]
+  "include": ["src"]
 }

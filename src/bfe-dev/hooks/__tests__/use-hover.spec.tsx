@@ -29,20 +29,22 @@ describe('useHover', () => {
     );
   }
 
-  it('should correctly listen to whether the referenced dom element is hovered or not', () => {
+  it('should correctly listen to whether the referenced dom element is hovered or not', async () => {
+    const user = userEvent.setup();
     render(<App />);
     expect(screen.queryByText(HOVERED_TEXT)).not.toBeInTheDocument();
 
     const targetElement = screen.getByLabelText('Username');
 
-    userEvent.hover(targetElement);
+    await user.hover(targetElement);
     expect(screen.getByText(HOVERED_TEXT)).toBeInTheDocument();
 
-    userEvent.unhover(targetElement);
+    await user.unhover(targetElement);
     expect(screen.queryByText(HOVERED_TEXT)).not.toBeInTheDocument();
   });
 
-  it('should change the target of the hovering listeners according to the ref, if this changes', () => {
+  it('should change the target of the hovering listeners according to the ref, if this changes', async () => {
+    const user = userEvent.setup();
     render(<App />);
     expect(screen.queryByText(HOVERED_TEXT)).not.toBeInTheDocument();
 
@@ -50,20 +52,20 @@ describe('useHover', () => {
     const inputElement1 = screen.getByLabelText('Password');
     const buttonElement = screen.getByText('toggle');
 
-    userEvent.hover(inputElement0);
+    await user.hover(inputElement0);
     expect(screen.getByText(HOVERED_TEXT)).toBeInTheDocument();
-    userEvent.unhover(inputElement0);
-    userEvent.hover(inputElement1);
+    await user.unhover(inputElement0);
+    await user.hover(inputElement1);
     expect(screen.queryByText(HOVERED_TEXT)).not.toBeInTheDocument();
 
-    userEvent.click(buttonElement);
+    await user.click(buttonElement);
 
-    userEvent.hover(inputElement0);
+    await user.hover(inputElement0);
     expect(screen.queryByText(HOVERED_TEXT)).not.toBeInTheDocument();
-    userEvent.unhover(inputElement0);
-    userEvent.hover(inputElement1);
+    await user.unhover(inputElement0);
+    await user.hover(inputElement1);
     expect(screen.getByText(HOVERED_TEXT)).toBeInTheDocument();
-    userEvent.unhover(inputElement1);
+    await user.unhover(inputElement1);
     expect(screen.queryByText(HOVERED_TEXT)).not.toBeInTheDocument();
   });
 });

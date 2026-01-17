@@ -63,9 +63,10 @@ describe('useTimeout', () => {
     const callbackSpy1 = jest.fn();
     const callbackSpy2 = jest.fn();
     const { rerender } = renderHook(
-      ({ callback }: { callback: jest.Mock } = { callback: callbackSpy1 }) => {
+      ({ callback }: { callback: jest.Mock }) => {
         useTimeout(callback, 1000);
-      }
+      },
+      { initialProps: { callback: callbackSpy1 } }
     );
 
     expect(callbackSpy1).toHaveBeenCalledTimes(0);

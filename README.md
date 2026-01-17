@@ -2,49 +2,53 @@
 
 Interview Tests based on React Hooks and RTL
 
-# Getting Started with Create React App
+## Tooling
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project currently uses:
 
-## Available Scripts
+- [Vite](https://vite.dev/) for the dev server and build
+- [Jest](https://jestjs.io/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for tests
+- [Yarn 4](https://yarnpkg.com/) as the package manager
+
+## Available scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn dev`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Runs the app in development mode.\
+Open the URL printed in the terminal (typically [http://localhost:5173](http://localhost:5173)) to view it in the browser.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the Jest test suite (React Testing Library, `@testing-library/user-event` v14).
 
-### `yarn run build`
+### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production using Vite.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `yarn preview`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Serves the production build locally so you can test it.
 
-### `yarn run eject`
+## Routes
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+When running `yarn dev`, the following routes are available:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Exercises from
+[bigfrontend.dev React challenges](https://bigfrontend.dev/react?sort=oldest).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [http://localhost:5173/](http://localhost:5173/)  default CRA-style landing page (`App`)
+- [http://localhost:5173/bfe/1-react-counter-app/](http://localhost:5173/bfe/1-react-counter-app/)  basic counter component
+- [http://localhost:5173/bfe/use-timeout/](http://localhost:5173/bfe/use-timeout/)  `useTimeout` hook demo
+- [http://localhost:5173/bfe/use-is-first-render/](http://localhost:5173/bfe/use-is-first-render/)  `useIsFirstRender` hook demo
+- [http://localhost:5173/bfe/use-swr/](http://localhost:5173/bfe/use-swr/)  `useSWR`-style data fetching hook demo
+- [http://localhost:5173/bfe/use-previous/](http://localhost:5173/bfe/use-previous/)  `usePrevious` hook demo
+- [http://localhost:5173/bfe/use-hover/](http://localhost:5173/bfe/use-hover/)  `useHover` hook demo
+- [http://localhost:5173/bfe/use-toggle/](http://localhost:5173/bfe/use-toggle/)  `useToggle` hook demo
+- [http://localhost:5173/bfe/use-debounce/](http://localhost:5173/bfe/use-debounce/)  `useDebounce` hook demo
+- [http://localhost:5173/bfe/use-effect-once/](http://localhost:5173/bfe/use-effect-once/)  `useEffectOnce` hook demo
+- [http://localhost:5173/bfe/phone-number-input/](http://localhost:5173/bfe/phone-number-input/)  phone number input formatting component
+- [http://localhost:5173/bfe/use-focus/](http://localhost:5173/bfe/use-focus/)  `useFocus` hook demo
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Any unknown route will redirect back to `/`.
