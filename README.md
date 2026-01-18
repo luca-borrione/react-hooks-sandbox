@@ -40,8 +40,8 @@ Exercises from
 
 - [http://localhost:5173/](http://localhost:5173/)  default CRA-style landing page (`App`)
 - [http://localhost:5173/bfe/1-react-counter-app/](http://localhost:5173/bfe/1-react-counter-app/)  basic counter component
-- [http://localhost:5173/bfe/use-timeout/](http://localhost:5173/bfe/use-timeout/)  `useTimeout` hook demo
-- [http://localhost:5173/bfe/use-is-first-render/](http://localhost:5173/bfe/use-is-first-render/)  `useIsFirstRender` hook demo
+- [http://localhost:5173/bfe/2-use-timeout/](http://localhost:5173/bfe/use-timeout/)  `useTimeout` hook demo
+- [http://localhost:5173/bfe/3-use-is-first-render/](http://localhost:5173/bfe/use-is-first-render/)  `useIsFirstRender` hook demo
 - [http://localhost:5173/bfe/use-swr/](http://localhost:5173/bfe/use-swr/)  `useSWR`-style data fetching hook demo
 - [http://localhost:5173/bfe/use-previous/](http://localhost:5173/bfe/use-previous/)  `usePrevious` hook demo
 - [http://localhost:5173/bfe/use-hover/](http://localhost:5173/bfe/use-hover/)  `useHover` hook demo

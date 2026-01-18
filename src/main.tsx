@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import { ReactCounterApp } from './bfe-dev/routes/1-react-counter-app';
 import { UseTimeoutApp } from './bfe-dev/routes/2-use-timeout';
-import { UseIsFirstRenderApp } from './bfe-dev/routes/use-is-first-render';
+import { UseIsFirstRenderApp } from './bfe-dev/routes/3-use-is-first-render';
 import { UseSWR } from './bfe-dev/routes/use-swr';
 import { UsePrevious } from './bfe-dev/routes/use-previous';
 import { UseHover } from './bfe-dev/routes/use-hover';
@@ -22,7 +22,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<App />} />
         <Route path="/bfe/1-react-counter-app/" element={<ReactCounterApp />} />
         <Route path="/bfe/2-use-timeout/" element={<UseTimeoutApp />} />
-        <Route path="/bfe/use-is-first-render/" element={<UseIsFirstRenderApp />} />
+        <Route path="/bfe/3-use-is-first-render/" element={<UseIsFirstRenderApp />} />
         <Route path="/bfe/use-swr/" element={<UseSWR />} />
         <Route path="/bfe/use-previous/" element={<UsePrevious />} />
         <Route path="/bfe/use-hover/" element={<UseHover />} />
