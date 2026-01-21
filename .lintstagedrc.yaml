@@ -10,4 +10,5 @@
 package.json:
   - prettier-package-json --write
 yarn.lock:
+  - yarn install --immutable --immutable-cache --check-cache
   - yarn dedupe

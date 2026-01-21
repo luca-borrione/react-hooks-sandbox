@@ -1,4 +1,3 @@
 set -eu
 
-yarn install --immutable --immutable-cache --check-cache
 yarn lint-staged

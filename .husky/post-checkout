@@ -1,0 +1,9 @@
+set -eu
+
+# Git passes three args: <old-ref> <new-ref> <is-branch-checkout>
+# Only run on branch checkouts (when the third arg is "1").
+if [ "${3-}" != "1" ]; then
+  exit 0
+fi
+
+yarn install --immutable --immutable-cache --check-cache
