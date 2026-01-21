@@ -57,10 +57,9 @@ describe('useTimeout', () => {
     const callbackSpy = jest.fn();
     expect(window.setTimeout).toHaveBeenCalledTimes(0);
 
-    const { rerender } = renderHook(
-      ({ delay }: { delay: number }) => useTimeout(callbackSpy, delay),
-      { initialProps: { delay: 5000 } }
-    );
+    const { rerender } = renderHook(({ delay }) => useTimeout(callbackSpy, delay), {
+      initialProps: { delay: 5000 },
+    });
     expect(window.setTimeout).toHaveBeenCalledTimes(1);
     expect(window.clearTimeout).toHaveBeenCalledTimes(0);
     expect(callbackSpy).toHaveBeenCalledTimes(0);
@@ -87,10 +86,9 @@ describe('useTimeout', () => {
 
     expect(window.setTimeout).toHaveBeenCalledTimes(0);
 
-    const { rerender } = renderHook(
-      ({ callback }: { callback: jest.Mock }) => useTimeout(callback, delay),
-      { initialProps: { callback: callbackSpy1 } }
-    );
+    const { rerender } = renderHook(({ callback }) => useTimeout(callback, delay), {
+      initialProps: { callback: callbackSpy1 },
+    });
     expect(window.setTimeout).toHaveBeenCalledTimes(1);
     expect(window.clearTimeout).toHaveBeenCalledTimes(0);
     expect(callbackSpy1).toHaveBeenCalledTimes(0);

@@ -4,4 +4,8 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
-(globalThis as any).IS_REACT_ACT_ENVIRONMENT = true;
+const globalForJest = globalThis as typeof globalThis & {
+  IS_REACT_ACT_ENVIRONMENT?: boolean;
+};
+
+globalForJest.IS_REACT_ACT_ENVIRONMENT = true;

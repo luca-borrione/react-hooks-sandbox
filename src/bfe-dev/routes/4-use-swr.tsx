@@ -1,16 +1,11 @@
 import { useSWR } from '../hooks/4-use-swr';
 
-interface ReturnData {
-  name: string;
-}
-
-// const fetcher = () => ({ name: "BFE.dev" });
 const fetcher = () =>
-  new Promise<ReturnData>((resolve) => {
+  new Promise<{ name: string }>((resolve) => {
     window.setTimeout(() => resolve({ name: 'BFE.dev' }), 2000);
   });
 
-export function UseSWR() {
+export function UseSWRApp() {
   const { data, error } = useSWR('/api', fetcher);
   if (error) {
     return <div>errored</div>;

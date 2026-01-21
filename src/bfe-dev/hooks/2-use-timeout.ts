@@ -2,7 +2,10 @@ import { useRef, useEffect } from 'react';
 
 export function useTimeout(callback: () => void, delay: number) {
   const callbackRef = useRef(callback);
-  callbackRef.current = callback;
+
+  useEffect(() => {
+    callbackRef.current = callback;
+  }, [callback]);
 
   useEffect(() => {
     const timerId = setTimeout(() => callbackRef.current(), delay);

@@ -31,7 +31,8 @@ export function PhoneNumberInput() {
     if (/^[()\d-]*$/.test(target.value)) {
       const formatted = formatNumbers(target.value);
       delta = Math.max(formatted.length - target.value.length, -1);
-      target.value = textRef.current = formatted;
+      textRef.current = formatted;
+      target.value = formatted;
     } else {
       target.value = textRef.current;
       delta = -1;

@@ -15,15 +15,15 @@ function callback2() {
 }
 
 function UseTimeout({ callback, delay }: UseTimeoutParams) {
-  const initialTime = useRef(Date.now());
+  const initialTime = useRef<number>(0);
 
   useEffect(() => {
     initialTime.current = Date.now();
   }, [delay]);
 
   const handleCallback = () => {
-    const delay = Date.now() - initialTime.current;
-    console.log('>> delay: ', delay);
+    const elapsed = Date.now() - initialTime.current;
+    console.log('>> delay: ', elapsed);
     callback();
   };
 

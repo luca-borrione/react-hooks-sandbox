@@ -5,5 +5,7 @@ export function useIsFirstRender(): boolean {
   useEffect(() => {
     isFirstRender.current = false;
   });
+  // This hook intentionally exposes the ref value during render to model
+  // eslint-disable-next-line react-hooks/refs
   return isFirstRender.current;
 }

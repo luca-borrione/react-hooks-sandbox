@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { CounterButtons } from '../1-counter-buttons';
 import userEvent from '@testing-library/user-event';
+import { CounterButtons } from '../1-counter-buttons';
 
 describe('CounterButtons', () => {
   it('should render the two buttons and start with the counter set to 0', () => {

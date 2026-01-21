@@ -1,0 +1,13 @@
+'*.{js,ts,tsx}':
+  - prettier --write
+  - eslint --fix
+  - jest --bail --findRelatedTests  --passWithNoTests
+'*.{cjs,mjs}':
+  - prettier --write
+  - eslint --fix
+'*.{yaml,yml,json,md}':
+  - prettier --write
+package.json:
+  - prettier-package-json --write
+yarn.lock:
+  - yarn dedupe

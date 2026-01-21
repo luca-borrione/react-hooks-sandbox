@@ -1,21 +1,20 @@
 import { render, screen } from '@testing-library/react';
 
-import { useHover } from '../use-hover';
 import userEvent from '@testing-library/user-event';
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
+import { useHover } from '../use-hover';
 
 describe('useHover', () => {
   const HOVERED_TEXT = 'hovered';
   const NOT_HOVERED_TEXT = 'not hovered';
 
   function App() {
-    let i = 0;
     const [ref, isHovered] = useHover<HTMLInputElement>();
-    const [refTarget, setRefTarget] = useState(i % 2);
+    const [refTarget, setRefTarget] = useState(0);
 
-    const handleClick = useCallback(() => {
-      setRefTarget(++i % 2);
-    }, [i, setRefTarget]);
+    const handleClick = () => {
+      setRefTarget((current) => (current + 1) % 2);
+    };
 
     return (
       <>
