@@ -1,13 +1,16 @@
 import { useEffect, useRef } from 'react';
 
+// React Coding Question from
+// https://bigfrontend.dev/react/usePrevious
+
 export function usePrevious<T>(value: T): T | undefined {
-  const ref = useRef<T | undefined>(undefined);
+  const previousRef = useRef<T | undefined>(undefined);
 
   useEffect(() => {
-    ref.current = value;
+    previousRef.current = value;
   }, [value]);
 
   // This helper deliberately reads the ref during render to return the previous committed value
   // eslint-disable-next-line react-hooks/refs
-  return ref.current;
+  return previousRef.current;
 }

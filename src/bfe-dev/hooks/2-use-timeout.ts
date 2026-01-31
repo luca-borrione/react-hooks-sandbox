@@ -1,5 +1,8 @@
 import { useRef, useEffect } from 'react';
 
+// React Coding Question from
+// https://bigfrontend.dev/react/usetimeout
+
 export function useTimeout(callback: () => void, delay: number) {
   const callbackRef = useRef(callback);
 

@@ -38,17 +38,17 @@ When running `yarn dev`, the following routes are available:
 Exercises from
 [bigfrontend.dev React challenges](https://bigfrontend.dev/react?sort=oldest).
 
-- [http://localhost:5173/](http://localhost:5173/)  default CRA-style landing page (`App`)
-- [http://localhost:5173/bfe/1-react-counter-app/](http://localhost:5173/bfe/1-react-counter-app/)  basic counter component
-- [http://localhost:5173/bfe/2-use-timeout/](http://localhost:5173/bfe/use-timeout/)  `useTimeout` hook demo
-- [http://localhost:5173/bfe/3-use-is-first-render/](http://localhost:5173/bfe/use-is-first-render/)  `useIsFirstRender` hook demo
-- [http://localhost:5173/bfe/use-swr/](http://localhost:5173/bfe/use-swr/)  `useSWR`-style data fetching hook demo
-- [http://localhost:5173/bfe/use-previous/](http://localhost:5173/bfe/use-previous/)  `usePrevious` hook demo
-- [http://localhost:5173/bfe/use-hover/](http://localhost:5173/bfe/use-hover/)  `useHover` hook demo
-- [http://localhost:5173/bfe/use-toggle/](http://localhost:5173/bfe/use-toggle/)  `useToggle` hook demo
-- [http://localhost:5173/bfe/use-debounce/](http://localhost:5173/bfe/use-debounce/)  `useDebounce` hook demo
-- [http://localhost:5173/bfe/use-effect-once/](http://localhost:5173/bfe/use-effect-once/)  `useEffectOnce` hook demo
-- [http://localhost:5173/bfe/phone-number-input/](http://localhost:5173/bfe/phone-number-input/)  phone number input formatting component
-- [http://localhost:5173/bfe/use-focus/](http://localhost:5173/bfe/use-focus/)  `useFocus` hook demo
+- [http://localhost:5173/](http://localhost:5173)  default CRA-style landing page (`App`)
+- [1-react-counter-app](http://localhost:5173/bfe/1-react-counter-app)  basic counter component
+- [2-use-timeout](http://localhost:5173/bfe/use-timeout)  `useTimeout` hook demo
+- [3-use-is-first-render](http://localhost:5173/bfe/use-is-first-render)  `useIsFirstRender` hook demo
+- [4-use-sw](http://localhost:5173/bfe/4-use-swr)  `useSWR`-style data fetching hook demo
+- [5-use-previous](http://localhost:5173/bfe/5-use-previous)  `usePrevious` hook demo
+- [use-hover/](http://localhost:5173/bfe/use-hover/)  `useHover` hook demo
+- [use-toggle/](http://localhost:5173/bfe/use-toggle/)  `useToggle` hook demo
+- [use-debounce/](http://localhost:5173/bfe/use-debounce/)  `useDebounce` hook demo
+- [use-effect-once/](http://localhost:5173/bfe/use-effect-once/)  `useEffectOnce` hook demo
+- [phone-number-input/](http://localhost:5173/bfe/phone-number-input/)  phone number input formatting component
+- [use-focus/](http://localhost:5173/bfe/use-focus/)  `useFocus` hook demo
 
 Any unknown route will redirect back to `/`.

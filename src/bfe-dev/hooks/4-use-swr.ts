@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 
+// React Coding Question from
+// https://bigfrontend.dev/react/useSWR-1
+
 function isPromise<T>(value: T | Promise<T> | undefined): value is Promise<T> {
   return value instanceof Promise;
 }

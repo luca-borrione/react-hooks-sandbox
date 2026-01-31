@@ -1,5 +1,8 @@
 import { useEffect, useRef } from 'react';
 
+// React Coding Question from
+// https://bigfrontend.dev/react/useIsFirstRender
+
 export function useIsFirstRender(): boolean {
   const isFirstRender = useRef(true);
   useEffect(() => {
