@@ -38,13 +38,13 @@ When running `yarn dev`, the following routes are available:
 Exercises from
 [bigfrontend.dev React challenges](https://bigfrontend.dev/react?sort=oldest).
 
-- [http://localhost:5173/](http://localhost:5173)  default CRA-style landing page (`App`)
+- [http://localhost:5173](http://localhost:5173)  default CRA-style landing page (`App`)
 - [1-react-counter-app](http://localhost:5173/bfe/1-react-counter-app)  basic counter component
 - [2-use-timeout](http://localhost:5173/bfe/use-timeout)  `useTimeout` hook demo
 - [3-use-is-first-render](http://localhost:5173/bfe/use-is-first-render)  `useIsFirstRender` hook demo
 - [4-use-sw](http://localhost:5173/bfe/4-use-swr)  `useSWR`-style data fetching hook demo
 - [5-use-previous](http://localhost:5173/bfe/5-use-previous)  `usePrevious` hook demo
-- [use-hover/](http://localhost:5173/bfe/use-hover/)  `useHover` hook demo
+- [6-use-hover](http://localhost:5173/bfe/6-use-hover)  `useHover` hook demo
 - [use-toggle/](http://localhost:5173/bfe/use-toggle/)  `useToggle` hook demo
 - [use-debounce/](http://localhost:5173/bfe/use-debounce/)  `useDebounce` hook demo
 - [use-effect-once/](http://localhost:5173/bfe/use-effect-once/)  `useEffectOnce` hook demo

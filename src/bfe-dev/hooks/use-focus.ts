@@ -9,7 +9,7 @@ export function useFocus<T extends HTMLElement>(): [Ref<T>, boolean] {
 
   const callbackRef = useCallback(
     (node: T) => {
-      console.log('>> node', node);
+      // console.log('>> node', node);
       const previousNode = nodeRef.current;
       if (previousNode) {
         previousNode.removeEventListener('focus', handleOnFocus);
@@ -23,7 +23,7 @@ export function useFocus<T extends HTMLElement>(): [Ref<T>, boolean] {
         node.addEventListener('blur', handleOnBlur);
       }
     },
-    [handleOnFocus, handleOnBlur]
+    [handleOnFocus, handleOnBlur],
   );
 
   return [callbackRef, isFocused];
