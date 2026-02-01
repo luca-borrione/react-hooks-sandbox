@@ -45,7 +45,7 @@ Exercises from
 - [4-use-sw](http://localhost:5173/bfe/4-use-swr)  `useSWR`-style data fetching hook demo
 - [5-use-previous](http://localhost:5173/bfe/5-use-previous)  `usePrevious` hook demo
 - [6-use-hover](http://localhost:5173/bfe/6-use-hover)  `useHover` hook demo
-- [use-toggle/](http://localhost:5173/bfe/use-toggle/)  `useToggle` hook demo
+- [7-use-toggle](http://localhost:5173/bfe/7-use-toggle)  `useToggle` hook demo
 - [use-debounce/](http://localhost:5173/bfe/use-debounce/)  `useDebounce` hook demo
 - [use-effect-once/](http://localhost:5173/bfe/use-effect-once/)  `useEffectOnce` hook demo
 - [phone-number-input/](http://localhost:5173/bfe/phone-number-input/)  phone number input formatting component
