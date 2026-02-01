@@ -11,7 +11,7 @@ import { UsePrevious } from './bfe-dev/routes/5-use-previous';
 import { UseHover } from './bfe-dev/routes/6-use-hover';
 import { UseToggle } from './bfe-dev/routes/7-use-toggle';
 import { UseDebounce } from './bfe-dev/routes/8-use-debounce';
-import { UseEffectOnce } from './bfe-dev/routes/use-effect-once';
+import { UseEffectOnce } from './bfe-dev/routes/9-use-effect-once';
 import { PhoneNumberInput } from './bfe-dev/components/phone-number-input';
 import { UseFocus } from './bfe-dev/routes/use-focus';
 
@@ -28,7 +28,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/bfe/6-use-hover/" element={<UseHover />} />
         <Route path="/bfe/7-use-toggle/" element={<UseToggle />} />
         <Route path="/bfe/8-use-debounce/" element={<UseDebounce />} />
-        <Route path="/bfe/use-effect-once/" element={<UseEffectOnce />} />
+        <Route path="/bfe/9-use-effect-once/" element={<UseEffectOnce />} />
         <Route path="/bfe/phone-number-input/" element={<PhoneNumberInput />} />
         <Route path="/bfe/use-focus/" element={<UseFocus />} />
         <Route path="*" element={<Navigate to="/" replace />} />
