@@ -1,5 +1,8 @@
 import { Ref, useCallback, useState } from 'react';
 
+// React Coding Question from
+// https://bigfrontend.dev/react/useHover
+
 export function useHover<T extends HTMLElement>(): [Ref<T>, boolean] {
   const [isHover, setIsHover] = useState(false);
   const handleMouseEnter = useCallback(() => setIsHover(true), []);

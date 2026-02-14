@@ -10,12 +10,8 @@ export function CounterButtons() {
 
   return (
     <>
-      <button data-testid="decrement-button" onClick={handleDecrement}>
-        -
-      </button>
-      <button data-testid="increment-button" onClick={handleIncrement}>
-        +
-      </button>
+      <button onClick={handleDecrement}>-</button>
+      <button onClick={handleIncrement}>+</button>
       <p>clicked: {counter}</p>
     </>
   );
