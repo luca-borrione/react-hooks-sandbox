@@ -35,20 +35,31 @@ Serves the production build locally so you can test it.
 
 When running `yarn dev`, the following routes are available:
 
+- [http://localhost:5173](http://localhost:5173)  default CRA-style landing page (`App`)
+
+Any unknown route will redirect back to `/`.
+
+### BFE routes
+
 Exercises from
 [bigfrontend.dev React challenges](https://bigfrontend.dev/react?sort=oldest).
 
-- [http://localhost:5173](http://localhost:5173)  default CRA-style landing page (`App`)
-- [1-react-counter-app](http://localhost:5173/bfe/1-react-counter-app)  basic counter component
-- [2-use-timeout](http://localhost:5173/bfe/use-timeout)  `useTimeout` hook demo
-- [3-use-is-first-render](http://localhost:5173/bfe/use-is-first-render)  `useIsFirstRender` hook demo
-- [4-use-sw](http://localhost:5173/bfe/4-use-swr)  `useSWR`-style data fetching hook demo
-- [5-use-previous](http://localhost:5173/bfe/5-use-previous)  `usePrevious` hook demo
-- [6-use-hover](http://localhost:5173/bfe/6-use-hover)  `useHover` hook demo
-- [7-use-toggle](http://localhost:5173/bfe/7-use-toggle)  `useToggle` hook demo
-- [8-use-debounce](http://localhost:5173/bfe/8-use-debounce)  `useDebounce` hook demo
-- [9-use-effect-once](http://localhost:5173/bfe/9-use-effect-once/)  `useEffectOnce` hook demo
-- [phone-number-input/](http://localhost:5173/bfe/phone-number-input/)  phone number input formatting component
-- [use-focus/](http://localhost:5173/bfe/use-focus/)  `useFocus` hook demo
+All BFE exercises live under `/bfe/*` routes:
 
-Any unknown route will redirect back to `/`.
+- [1-react-counter-app](http://localhost:5173/bfe/1-react-counter-app)
+- [2-use-timeout](http://localhost:5173/bfe/use-timeout)
+- [3-use-is-first-render](http://localhost:5173/bfe/use-is-first-render)
+- [4-use-sw](http://localhost:5173/bfe/4-use-swr)
+- [5-use-previous](http://localhost:5173/bfe/5-use-previous)
+- [6-use-hover](http://localhost:5173/bfe/6-use-hover)
+- [7-use-toggle](http://localhost:5173/bfe/7-use-toggle)
+- [8-use-debounce](http://localhost:5173/bfe/8-use-debounce)
+- [9-use-effect-once](http://localhost:5173/bfe/9-use-effect-once/)
+- [phone-number-input/](http://localhost:5173/bfe/phone-number-input/)
+- [use-focus/](http://localhost:5173/bfe/use-focus/)
+
+### ChatGPT routes
+
+ChatGPT-based interview exercises live under `/gpt/*` routes:
+
+- [1-user-context](http://localhost:5173/gpt/1-user-context/)

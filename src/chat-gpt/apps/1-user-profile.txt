@@ -1,0 +1,37 @@
+React Interview Question – Basic Context Setup (React + TypeScript)
+
+You are building a small React application where the current user's name should be accessible from anywhere in the component tree.
+
+Task:
+
+Implement a solution using React Context that allows any component to read the current user's name.
+
+Requirements:
+
+Define a context that stores an object with the following shape:
+
+{
+name: string;
+}
+
+Create a provider component that:
+
+Accepts children
+
+Provides the user value { name: "Luca" }
+
+Create a component called Profile that:
+
+Reads the user's name from context
+
+Renders: Hello Luca
+
+Use TypeScript.
+
+Do not use the "any" type.
+
+Bonus (if time allows):
+
+Prevent misuse of the context outside its provider.
+
+Structure the solution in a way that would scale in a larger application.

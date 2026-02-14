@@ -14,6 +14,7 @@ import { UseDebounce } from './bfe-dev/routes/8-use-debounce';
 import { UseEffectOnce } from './bfe-dev/routes/9-use-effect-once';
 import { PhoneNumberInput } from './bfe-dev/components/phone-number-input';
 import { UseFocus } from './bfe-dev/routes/use-focus';
+import { UserProfile } from './chat-gpt/apps/1-user-profile-app';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -31,6 +32,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/bfe/9-use-effect-once/" element={<UseEffectOnce />} />
         <Route path="/bfe/phone-number-input/" element={<PhoneNumberInput />} />
         <Route path="/bfe/use-focus/" element={<UseFocus />} />
+        <Route path="/gpt/1-user-context/" element={<UserProfile />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
