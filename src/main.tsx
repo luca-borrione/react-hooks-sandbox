@@ -15,6 +15,7 @@ import { UseEffectOnce } from './bfe-dev/routes/9-use-effect-once';
 import { PhoneNumberInput } from './bfe-dev/components/phone-number-input';
 import { UseFocus } from './bfe-dev/routes/use-focus';
 import { UserProfile } from './chat-gpt/apps/1-user-profile-app';
+import { CartApp } from './chat-gpt/apps/2-cart-context';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -33,6 +34,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/bfe/phone-number-input/" element={<PhoneNumberInput />} />
         <Route path="/bfe/use-focus/" element={<UseFocus />} />
         <Route path="/gpt/1-user-context/" element={<UserProfile />} />
+        <Route path="/gpt/2-cart-context/" element={<CartApp />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

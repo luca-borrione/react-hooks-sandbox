@@ -63,3 +63,4 @@ All BFE exercises live under `/bfe/*` routes:
 ChatGPT-based interview exercises live under `/gpt/*` routes:
 
 - [1-user-context](http://localhost:5173/gpt/1-user-context/)
+- [2-cart-context](http://localhost:5173/gpt/2-cart-context/)
